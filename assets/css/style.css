@@ -78,42 +78,45 @@ a.btn-primary:hover {
 }
 
 /* =========================
-   HEADER
+   VERTICAL SIDEBAR HEADER
 ========================= */
 .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;                    /* full height of viewport */
+    width: 220px;                      /* sidebar width */
     background-color: var(--bg-footer);
-    padding: 12px 20px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-    width: 100%;
-}
-
-.header-container {
     display: flex;
-    align-items: flex-start;   /* aligns logo top with nav */
-    justify-content: space-between;
-    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.3);
+    z-index: 1000;
 }
 
-/* Logo */
-.header-container .logo {
+.sidebar-logo {
     max-height: 50px;
+    margin-bottom: 40px;
 }
 
-/* Vertical nav */
 .nav-links-vertical {
     list-style: none;
     display: flex;
-    flex-direction: column;  /* stack links vertically */
-    gap: 8px;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    text-align: center;
 }
 
 .nav-links-vertical li a {
+    display: block;
     color: var(--color-light);
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     font-size: 16px;
     text-decoration: none;
-    padding: 6px 0;
+    padding: 10px 0;
     transition: all 0.3s ease;
 }
 
@@ -121,25 +124,7 @@ a.btn-primary:hover {
 .nav-links-vertical li a.active {
     color: var(--color-accent);
     text-shadow: 0 0 8px rgba(212,175,55,0.8);
-    letter-spacing: 1.5px;
 }
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .nav-links-vertical {
-        flex-direction: row;  /* horizontal on small screens */
-        gap: 15px;
-    }
-}
-
 
 /* =========================
    PAGE CONTENT OFFSET
