@@ -60,7 +60,7 @@ body {
 a.btn-primary {
     background-color: var(--color-accent);
     color: var(--color-dark);
-    padding: 14px 36px;
+    padding: 12px 28px; /* smaller padding for mobile */
     border-radius: var(--radius-md);
     font-weight: 700;
     font-size: 16px;
@@ -82,7 +82,7 @@ a.btn-primary:hover {
 ========================= */
 .site-header {
     background-color: var(--bg-footer);
-    padding: 12px 20px;               /* compact height */
+    padding: 12px 20px;
     width: 100%;
     box-shadow: 0 2px 12px rgba(0,0,0,0.3);
     position: sticky;
@@ -95,6 +95,7 @@ a.btn-primary:hover {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
 }
 
 /* Logo */
@@ -109,11 +110,12 @@ a.btn-primary:hover {
     gap: 25px;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap; /* allow wrapping for mobile */
 }
 
 .nav-links-horizontal li a {
     color: var(--color-light);
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-weight: 600;
     font-size: 16px;
     text-decoration: none;
@@ -129,50 +131,11 @@ a.btn-primary:hover {
 }
 
 /* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .nav-links-horizontal {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        text-align: center;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .site-header {
-        position: relative;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px 20px;
-    }
-    .nav-links-vertical {
-        flex-direction: row;
-        gap: 15px;
-    }
-    .main-content {
-        margin-left: 0;
-        padding: 20px;
-    }
-}
-
-
-/* =========================
    HERO SECTION
 ========================= */
 .hero {
     text-align: center;
-    padding: 160px 20px;
+    padding: 120px 20px; /* smaller padding for mobile */
     background: var(--bg-hero);
     position: relative;
     overflow: hidden;
@@ -198,7 +161,7 @@ a.btn-primary:hover {
 
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: 54px;
+    font-size: 48px; /* slightly smaller for mobile */
     font-weight: 700;
     color: var(--color-accent);
     margin-bottom: 24px;
@@ -206,10 +169,10 @@ a.btn-primary:hover {
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--color-muted);
     margin-bottom: 40px;
-    max-width: 720px;
+    max-width: 90%; /* improve mobile readability */
     margin-left: auto;
     margin-right: auto;
 }
@@ -219,17 +182,18 @@ a.btn-primary:hover {
 ========================= */
 .grid {
     display: grid;
-    gap: 36px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px; /* smaller gap for mobile */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     margin-top: 40px;
 }
 
+/* Card styles unchanged */
 .card-link,
 .practice-card,
 .team-card,
 .article-card {
     background-color: var(--color-light);
-    padding: 28px;
+    padding: 20px; /* reduced padding for mobile */
     border-radius: var(--radius-md);
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -248,7 +212,7 @@ a.btn-primary:hover {
 .team-card h3,
 .article-card h3 {
     font-family: var(--font-heading);
-    font-size: 22px;
+    font-size: 20px; /* slightly smaller for mobile */
     margin-bottom: 12px;
     color: var(--color-primary);
 }
@@ -258,8 +222,8 @@ a.btn-primary:hover {
 .team-card p,
 .article-card p {
     color: var(--color-muted);
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px; /* smaller for mobile */
+    line-height: 1.5;
 }
 
 /* =========================
@@ -268,7 +232,7 @@ a.btn-primary:hover {
 .team-card img {
     width: 100%;
     border-radius: var(--radius-md);
-    margin-bottom: 20px;
+    margin-bottom: 16px; /* slightly reduced margin */
 }
 
 /* =========================
@@ -276,21 +240,21 @@ a.btn-primary:hover {
 ========================= */
 .cta-section {
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px; /* smaller padding for mobile */
     background-color: var(--bg-footer);
     color: var(--color-light);
 }
 
 .cta-section h2 {
     font-family: var(--font-heading);
-    font-size: 36px;
+    font-size: 32px; /* smaller for mobile */
     margin-bottom: 24px;
     color: var(--color-accent);
     text-shadow: 0 0 15px rgba(212,175,55,0.8);
 }
 
 .cta-section p {
-    font-size: 18px;
+    font-size: 16px; /* smaller for mobile */
     color: var(--color-muted);
     margin-bottom: 32px;
 }
@@ -301,7 +265,7 @@ a.btn-primary:hover {
 footer {
     background-color: var(--color-dark);
     color: var(--color-light);
-    padding: 64px 0;
+    padding: 48px 20px; /* reduced padding for mobile */
 }
 
 footer .footer-container {
@@ -309,21 +273,22 @@ footer .footer-container {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 20px; /* added gap for wrapping on mobile */
 }
 
 footer .footer-logo {
-    width: 160px;
+    width: 140px;
 }
 
 .social-icons {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 16px; /* smaller gap for mobile */
 }
 
 .social-icons li img {
-    width: 28px;
-    height: 28px;
+    width: 24px; /* smaller for mobile */
+    height: 24px;
     filter: drop-shadow(0 0 6px var(--color-accent));
 }
 
@@ -333,11 +298,11 @@ footer .footer-logo {
 form input,
 form textarea {
     width: 100%;
-    padding: 16px;
-    margin-bottom: 20px;
+    padding: 14px; /* smaller padding for mobile */
+    margin-bottom: 16px;
     border-radius: var(--radius-sm);
     border: 1px solid #ccc;
-    font-size: 16px;
+    font-size: 14px; /* smaller font for mobile */
 }
 
 form button.full-width {
@@ -346,7 +311,7 @@ form button.full-width {
     color: var(--color-dark);
     font-weight: 700;
     box-shadow: var(--shadow-light);
-    padding: 14px;
+    padding: 12px;
     border-radius: var(--radius-md);
     text-transform: uppercase;
 }
@@ -392,16 +357,28 @@ form button.full-width {
         flex-direction: column;
         gap: 20px;
     }
-    .nav-links {
+    .nav-links-horizontal {
         flex-direction: column;
         align-items: center;
+        gap: 12px;
     }
 }
 
 @media (max-width: 768px) {
-    .hero h1 { font-size: 42px; }
-    .hero p { font-size: 16px; }
-    .cta-section h2 { font-size: 28px; }
-    .cta-section p { font-size: 16px; }
-    .grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 36px; }
+    .hero p { font-size: 15px; }
+    .cta-section h2 { font-size: 26px; }
+    .cta-section p { font-size: 14px; }
+    .grid { grid-template-columns: 1fr; gap: 20px; }
+    .card-link,
+    .practice-card,
+    .team-card,
+    .article-card {
+        padding: 16px;
+    }
+    form input,
+    form textarea {
+        font-size: 14px;
+        padding: 12px;
+    }
 }
