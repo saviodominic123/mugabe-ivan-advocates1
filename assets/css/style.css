@@ -78,77 +78,74 @@ a.btn-primary:hover {
 }
 
 /* =========================
-   VERTICAL SIDEBAR HEADER
+   HEADER - HORIZONTAL TOP
 ========================= */
 .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;                    /* full height of viewport */
-    width: 220px;                      /* sidebar width */
     background-color: var(--bg-footer);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    box-shadow: 2px 0 12px rgba(0,0,0,0.3);
+    padding: 12px 20px;               /* compact height */
+    width: 100%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
-.sidebar-logo {
-    max-height: 50px;
-    margin-bottom: 40px;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 }
 
-.nav-links-vertical {
+/* Logo */
+.logo {
+    max-height: 50px;
+}
+
+/* Horizontal nav links */
+.nav-links-horizontal {
     list-style: none;
     display: flex;
-    flex-direction: column;
     gap: 25px;
-    width: 100%;
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-links-vertical li a {
-    display: block;
+.nav-links-horizontal li a {
     color: var(--color-light);
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     font-size: 16px;
     text-decoration: none;
-    padding: 10px 0;
+    padding: 6px 8px;
     transition: all 0.3s ease;
 }
 
-.nav-links-vertical li a:hover,
-.nav-links-vertical li a.active {
+.nav-links-horizontal li a:hover,
+.nav-links-horizontal li a.active {
     color: var(--color-accent);
     text-shadow: 0 0 8px rgba(212,175,55,0.8);
-}
-
-/* =========================
-   PAGE CONTENT OFFSET
-========================= */
-.main-content {
-    margin-left: 220px;      /* leave space for sidebar */
-    padding: 40px 20px;
+    letter-spacing: 1px;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
-@media (max-width: 1024px) {
-    .site-header {
-        width: 60px;          /* collapsed sidebar on tablet */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
-    .nav-links-vertical li a {
-        font-size: 0;
-        padding: 10px 0;
-    }
-    .main-content {
-        margin-left: 60px;
+
+    .nav-links-horizontal {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
     }
 }
+
 
 @media (max-width: 768px) {
     .site-header {
