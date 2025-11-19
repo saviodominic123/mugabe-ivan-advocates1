@@ -1,6 +1,5 @@
 // =========================
 // MAIN JS FOR SITE
-// Handles: Sticky Header, Mobile Nav, Tabbed Sitemap, Footer Year
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -19,27 +18,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------------------------
-     MOBILE HAMBURGER TOGGLE
+     MOBILE HAMBURGER MENU
   --------------------------- */
   const hamburger = document.querySelector(".hamburger");
   const mobileNav = document.querySelector(".nav--mobile");
-  const mobileClose = document.querySelector(".nav-close");
 
-  if(hamburger && mobileNav && mobileClose) {
-    const openNav = () => {
-      mobileNav.classList.add("open");
-      hamburger.setAttribute("aria-expanded", "true");
-      document.body.style.overflow = "hidden";
-    };
-    const closeNav = () => {
-      mobileNav.classList.remove("open");
-      hamburger.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
-    };
+  if(hamburger && mobileNav) {
+    hamburger.addEventListener("click", () => {
+      mobileNav.classList.toggle("open");
+      hamburger.classList.toggle("open"); // optional: animate bars
+      // prevent body scroll when menu open
+      if(mobileNav.classList.contains("open")){
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    });
 
-    hamburger.addEventListener("click", openNav);
-    mobileClose.addEventListener("click", closeNav);
-    mobileNav.addEventListener("click", e => { if(e.target === mobileNav) closeNav(); });
+    // Close mobile menu when clicking a link
+    const mobileLinks = document.querySelectorAll(".nav--mobile a");
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileNav.classList.remove("open");
+        hamburger.classList.remove("open");
+        document.body.style.overflow = "";
+      });
+    });
   }
 
   /* ---------------------------
@@ -52,13 +56,12 @@ document.addEventListener("DOMContentLoaded", () => {
     tabLinks.forEach(tab => {
       tab.addEventListener("click", () => {
         const targetId = tab.dataset.tab;
-        if(!targetId) return;
 
-        // Remove active from all
+        // Remove active class from all tabs and contents
         tabLinks.forEach(t => t.classList.remove("active"));
         tabContents.forEach(c => c.classList.remove("active"));
 
-        // Activate selected tab and content
+        // Add active to clicked tab and its content
         tab.classList.add("active");
         const content = document.getElementById(targetId);
         if(content) content.classList.add("active");
@@ -67,9 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------------------------
-     FOOTER YEAR
+     DYNAMIC YEAR IN FOOTER
   --------------------------- */
   const yearEl = document.getElementById("year");
-  if(yearEl) yearEl.textContent = new Date().getFullYear();
+  if(yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 
 });
