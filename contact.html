@@ -3,152 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Mugabe Ivan Advocates</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <meta name="description" content="Contact Mugabe Ivan Advocates — expert legal advice and consultations.">
+  <title>Contact Us | Mugabe Ivan Advocates</title>
+
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
   <!-- HEADER -->
-<header class="site-header">
+  <header class="site-header">
     <div class="container header-container">
-        <!-- Logo Wrapper -->
-        <div class="logo-wrapper">
-            <a href="index.html">
-                <img src="assets/images/logo.jpg" alt="Mugabe Ivan Advocates Logo" class="logo">
-            </a>
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo.jpg" alt="Mugabe Ivan Advocates Logo" class="logo">
+      </a>
+
+      <nav class="nav--desktop">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="practice-areas.html">Practice Areas</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We provide professional legal guidance. Reach out for consultations, inquiries, or partnerships.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT GRID -->
+  <section class="contact-section">
+    <div class="container contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div class="contact-card fade-in">
+          <h3>📍 Address</h3>
+          <p>Mugabe Ivan Advocates<br>Nairobi, Kenya</p>
         </div>
+        <div class="contact-card fade-in">
+          <h3>📞 Phone</h3>
+          <p><a href="tel:+254700000000">+254 700 000 000</a></p>
+        </div>
+        <div class="contact-card fade-in">
+          <h3>✉️ Email</h3>
+          <p><a href="mailto:info@mugabeivanadvocates.com">info@mugabeivanadvocates.com</a></p>
+        </div>
+      </div>
 
-        <!-- Navigation -->
-        <nav>
-            <ul class="nav-links-horizontal">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="practice-areas.html">Practice Areas</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="insights.html">Insights</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <!-- Contact Form -->
+      <div class="contact-form fade-in">
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name..." required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your email..." required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="Your number...">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message..." rows="6" required></textarea>
+          </div>
+          <button type="submit">Submit Message</button>
+        </form>
+      </div>
+
     </div>
-</header>
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-container">
-      <h1>Get in Touch</h1>
-      <p>We’re here to answer your legal questions and provide professional guidance. Reach out today!</p>
-    </div>
   </section>
 
-  <!-- CONTACT FORM SECTION -->
-  <section class="container" style="margin-top:50px; max-width:600px;">
-    <h2 style="text-align:center; color:var(--accent-color); font-family:'Playfair Display', serif;">Contact Us</h2>
-    
-    <form action="https://formspree.io/f/mwpypblq" method="POST">
-      <label for="name">Full Name *</label>
-      <input type="text" name="name" id="name" placeholder="Your Name" required>
-
-      <label for="email">Email Address *</label>
-      <input type="email" name="email" id="email" placeholder="Your Email" required>
-
-      <label for="subject">Subject *</label>
-      <input type="text" name="subject" id="subject" placeholder="Subject" required>
-
-      <label for="message">Message *</label>
-      <textarea name="message" id="message" rows="6" placeholder="Your Message" required></textarea>
-
-      <button type="submit" class="btn-primary full-width">Send Message</button>
-    </form>
-  </section>
-
-  <!-- OFFICE CONTACT INFO -->
-  <section class="container" style="margin-top:60px; text-align:center;">
-    <h3 style="color:var(--primary-color); font-family:'Playfair Display', serif;">Our Office</h3>
-    <p>123 Legal Avenue, Nairobi, Kenya</p>
-    <p>Email: <a href="mailto:info@mugabeivanadvocates.com">info@mugabeivanadvocates.com</a></p>
-    <p>Call: <a href="tel:+254700123456">+254 700 123 456</a></p>
-  </section>
-  <!-- GOOGLE MAP SECTION -->
-<section class="container" style="margin-top:50px; text-align:center;">
-  <h3 style="color:var(--primary-color); font-family:'Playfair Display', serif;">Our Location</h3>
-  <div class="map-container" style="margin-top:20px;">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.123456789!2d36.8219!3d-1.2921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1734c1234567%3A0xabcdef123456789!2s123+Legal+Avenue%2C+Nairobi%2C+Kenya!5e0!3m2!1sen!2ske!4v1699999999999!5m2!1sen!2ske"
-      width="100%"
-      height="400"
-      style="border:0; border-radius:12px;"
-      allowfullscreen=""
-      loading="lazy"
+  <!-- MAP -->
+  <section class="map-section fade-in">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.123456789!2d36.8219!3d-1.2921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d5d2d44d45%3A0xabcdef123456!2sMugabe%20Ivan%20Advocates!5e0!3m2!1sen!2ske!4v1699999999999" 
+      allowfullscreen="" 
+      loading="lazy" 
       referrerpolicy="no-referrer-when-downgrade">
     </iframe>
-  </div>
-</section>
+  </section>
 
-  <!-- =========================
-      S I T E M A P  SECTION
-========================= -->
-<section class="sitemap">
-    <div class="container sitemap-container">
-
-        <div class="sitemap-column">
-            <h3>Firm</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About the Firm</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="insights.html">Insights</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="sitemap-column">
-            <h3>Practice Areas</h3>
-            <ul>
-                <li><a href="practice-areas.html">Corporate Law</a></li>
-                <li><a href="practice-areas.html">Civil Litigation</a></li>
-                <li><a href="practice-areas.html">Property Law</a></li>
-                <li><a href="practice-areas.html">Family Law</a></li>
-                <li><a href="practice-areas.html">Criminal Defense</a></li>
-            </ul>
-        </div>
-
-        <div class="sitemap-column">
-            <h3>Legal Resources</h3>
-            <ul>
-                <li><a href="#">Case Documents</a></li>
-                <li><a href="#">Law Reports</a></li>
-                <li><a href="#">Legal Forms</a></li>
-                <li><a href="#">Client Portal</a></li>
-            </ul>
-        </div>
-
-        <div class="sitemap-column">
-            <h3>Connect</h3>
-            <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">LinkedIn</a></li>
-               <li><a href="https://wa.me/+256743996356" target="_blank">WhatsApp</a></li>
-                <li><a href="mailto:info@mugabeivanadvocates.ug">Email Us</a></li>
-            </ul>
-        </div>
-
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <h2>Ready to discuss your case?</h2>
+      <p>Schedule a consultation with our team. We'll listen, advise, and act.</p>
+      <a href="contact.html" class="btn-primary">Contact Us</a>
     </div>
-</section>
+  </section>
 
+  <!-- SITEMAP TABBED -->
+  <section class="sitemap sitemap-section">
+    <div class="container">
+      <div class="tabs">
+        <button class="tab-link active" data-tab="firm">Firm</button>
+        <button class="tab-link" data-tab="practice">Practice Areas</button>
+        <button class="tab-link" data-tab="resources">Legal Resources</button>
+        <button class="tab-link" data-tab="connect">Connect</button>
+      </div>
+
+      <div class="tab-content active" id="firm">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About the Firm</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="practice">
+        <ul>
+          <li><a href="practice-areas.html">Corporate Law</a></li>
+          <li><a href="practice-areas.html">Civil Litigation</a></li>
+          <li><a href="practice-areas.html">Property Law</a></li>
+          <li><a href="practice-areas.html">Family Law</a></li>
+          <li><a href="practice-areas.html">Criminal Defense</a></li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="resources">
+        <ul>
+          <li><a href="#">Case Documents</a></li>
+          <li><a href="#">Law Reports</a></li>
+          <li><a href="#">Legal Forms</a></li>
+          <li><a href="#">Client Portal</a></li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="connect">
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="https://wa.me/+256743996356" target="_blank">WhatsApp</a></li>
+          <li><a href="mailto:info@mugabeivanadvocates.ug">Email Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="container footer-container">
-      <img src="assets/images/logo.png" alt="Mugabe Ivan Advocates Logo" class="footer-logo">
-      <ul class="social-icons">
-        <li><img src="assets/icons/social/facebook.svg" alt="Facebook"></li>
-        <li><img src="assets/icons/social/twitter.svg" alt="Twitter"></li>
-        <li><img src="assets/icons/social/linkedin.svg" alt="LinkedIn"></li>
-      </ul>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <img src="assets/images/logo.png" alt="Mugabe Ivan Advocates" class="footer-logo">
+        <p class="muted">Trusted legal counsel — Kenyan expertise, international standards.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p class="muted">No. 12 Legal Ave, Nairobi • <a href="tel:+254700000000">+254 700 000 000</a> • <a href="mailto:info@mugabeivanadvocates.com">info@mugabeivanadvocates.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <ul class="footer-links">
+          <li><a href="practice-areas.html">Practice Areas</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <p style="text-align:center; margin-top:20px; color:var(--text-light);">© 2025 Mugabe Ivan Advocates. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+    <div class="footer-bottom">
+      <p class="muted">© <span id="year"></span> Mugabe Ivan Advocates. All right
