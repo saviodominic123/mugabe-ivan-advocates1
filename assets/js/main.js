@@ -1,7 +1,3 @@
-// =========================
-// MAIN JS FOR SITE
-// Handles: Sticky Header, Mobile Nav, Tabbed Sitemap, Footer Year
-// =========================
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------------------------
@@ -19,24 +15,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------------------------
-     HAMBURGER MOBILE NAV
+     MOBILE HAMBURGER TOGGLE
   --------------------------- */
   const hamburger = document.querySelector(".hamburger");
   const mobileNav = document.querySelector(".nav--mobile");
 
   if (hamburger && mobileNav) {
-    // Toggle mobile menu
     hamburger.addEventListener("click", () => {
       mobileNav.classList.toggle("open");
-      hamburger.classList.toggle("is-active"); // optional if you want animated bars
+      hamburger.classList.toggle("open"); // adds the "X" animation
       document.body.style.overflow = mobileNav.classList.contains("open") ? "hidden" : "";
     });
 
-    // Close mobile menu if clicking outside links
-    mobileNav.addEventListener("click", (e) => {
+    // Close mobile nav if clicking a link
+    mobileNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileNav.classList.remove("open");
+        hamburger.classList.remove("open");
+        document.body.style.overflow = "";
+      });
+    });
+
+    // Close mobile nav if clicking outside
+    mobileNav.addEventListener("click", e => {
       if (e.target === mobileNav) {
         mobileNav.classList.remove("open");
-        hamburger.classList.remove("is-active");
+        hamburger.classList.remove("open");
         document.body.style.overflow = "";
       }
     });
@@ -53,11 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
       tab.addEventListener("click", () => {
         const targetId = tab.dataset.tab;
 
-        // Remove active class from all
+        // Remove active class from all tabs and contents
         tabLinks.forEach(t => t.classList.remove("active"));
         tabContents.forEach(c => c.classList.remove("active"));
 
-        // Add active class to clicked tab
+        // Add active to clicked tab and corresponding content
         tab.classList.add("active");
         const content = document.getElementById(targetId);
         if (content) content.classList.add("active");
