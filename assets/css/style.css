@@ -254,78 +254,144 @@ p{color:var(--color-muted); margin-bottom:1em}
         display: none !important;
     }
 }
-/* ---------------------------------------
-   MOBILE FIXES (Phones only)
-   --------------------------------------- */
+/* ----------------------------
+   MOBILE FIXES (PHONES / TABLETS)
+------------------------------- */
 @media (max-width: 768px) {
 
-  /* GENERAL FIX — remove sideways scrolling */
-  body, html {
-    overflow-x: hidden;
-  }
-
-  /* FIX: Practice Areas cards */
-  .grid-3, .grid-2, .grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px;
-  }
-
-  .card, .card-lg, .team-card, .article-card {
-    padding: 20px;
-  }
-
-  /* FIX: Team cards alignment */
-  .team-card {
-    flex-direction: row;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .team-card img {
-    width: 70px;
-    height: 70px;
-  }
-
-  /* FIX: Insights cards */
-  .article-card {
-    width: 100%;
-  }
-
-  /* FIX: Footer Quick Links */
-  .footer-grid {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .footer-col {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .footer-links a {
-    padding: 10px 0;
-    font-size: 16px;
-  }
-
-  /* FIX: Sitemap spacing */
-  .sitemap-list a {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-}
-/* FIX HAMBURGER VISIBILITY ON MOBILE */
-.hamburger {
-    display: inline-flex !important;
-    z-index: 9999;
-}
-
-.hamburger .bar {
-    background: var(--color-accent); /* gold to stay visible */
-}
-
-@media (min-width: 769px) {
+    /* SHOW HAMBURGER */
     .hamburger {
-        display: none !important; /* hide on desktop ONLY */
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        z-index: 9999;
+        cursor: pointer;
     }
+
+    .hamburger .bar {
+        height: 3px;
+        width: 35px;
+        background: var(--color-accent); /* gold bars */
+        border-radius: 3px;
+        transition: all 0.2s;
+    }
+
+    /* HIDE DESKTOP NAV */
+    .nav--desktop {
+        display: none !important;
+    }
+
+    /* GENERAL BODY FIX */
+    body, html {
+        overflow-x: hidden; /* remove sideways scrolling */
+    }
+
+    /* HERO */
+    .hero {
+        padding: 56px 20px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* GRIDS */
+    .grid-3, .grid-2, .grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    /* CARDS */
+    .card, .card-lg, .team-card, .article-card {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .card-lg {
+        min-height: unset;
+    }
+
+    /* TEAM CARDS */
+    .team-card {
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .team-card img {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* INSIGHTS CARDS */
+    .article-card {
+        width: 100%;
+    }
+
+    /* CTA */
+    .cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    /* FOOTER */
+    .footer-grid {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .footer-col {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-links a {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    /* SITEMAP */
+    .sitemap-list a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* TABBED SITEMAP */
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab-link {
+        width: 100%;
+        text-align: left;
+    }
+
+    .tab-content ul li a {
+        font-size: 16px;
+    }
+
+    /* MOBILE NAV */
+    .nav--mobile {
+        pointer-events: auto;
+    }
+
+    .nav--mobile .mobile-nav-inner {
+        width: 85vw;
+        transform: translateX(100%);
+        transition: transform 0.28s ease;
+        height: 100vh;
+        padding: 28px;
+        overflow-y: auto;
+    }
+
+    .nav--mobile.open .mobile-nav-inner {
+        transform: translateX(0);
+    }
+
+    .mobile-links a {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
 }
