@@ -314,3 +314,18 @@ p{color:var(--color-muted); margin-bottom:1em}
   }
 
 }
+/* FIX HAMBURGER VISIBILITY ON MOBILE */
+.hamburger {
+    display: inline-flex !important;
+    z-index: 9999;
+}
+
+.hamburger .bar {
+    background: var(--color-accent); /* gold to stay visible */
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none !important; /* hide on desktop ONLY */
+    }
+}
