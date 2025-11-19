@@ -254,3 +254,63 @@ p{color:var(--color-muted); margin-bottom:1em}
         display: none !important;
     }
 }
+/* ---------------------------------------
+   MOBILE FIXES (Phones only)
+   --------------------------------------- */
+@media (max-width: 768px) {
+
+  /* GENERAL FIX — remove sideways scrolling */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  /* FIX: Practice Areas cards */
+  .grid-3, .grid-2, .grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .card, .card-lg, .team-card, .article-card {
+    padding: 20px;
+  }
+
+  /* FIX: Team cards alignment */
+  .team-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .team-card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* FIX: Insights cards */
+  .article-card {
+    width: 100%;
+  }
+
+  /* FIX: Footer Quick Links */
+  .footer-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-col {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer-links a {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  /* FIX: Sitemap spacing */
+  .sitemap-list a {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+}
