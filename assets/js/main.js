@@ -1,7 +1,4 @@
-// =========================
-// MAIN JS FOR SITE
-// Handles: Sticky Header, Mobile Nav, Tabbed Sitemap, Footer Year, Hamburger
-// =========================
+// MAIN JS
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------------------------
@@ -10,45 +7,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".site-header");
   if(header) {
     window.addEventListener("scroll", () => {
-      if(window.scrollY > 50) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }
+      if(window.scrollY > 50) header.classList.add("scrolled");
+      else header.classList.remove("scrolled");
     });
   }
 
   /* ---------------------------
-     MOBILE HAMBURGER TOGGLE
+     HAMBURGER MOBILE MENU
   --------------------------- */
   const hamburger = document.querySelector(".hamburger");
   const mobileNav = document.querySelector(".nav--mobile");
 
   if(hamburger && mobileNav) {
     hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active"); // animate hamburger to X
-      mobileNav.classList.toggle("open");   // show/hide mobile nav
+      mobileNav.classList.toggle("open");
+      // animate hamburger bars
+      hamburger.classList.toggle("active");
+      // prevent scrolling when menu open
       document.body.style.overflow = mobileNav.classList.contains("open") ? "hidden" : "";
     });
-
-    // Close mobile nav when clicking a link
-    mobileNav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileNav.classList.remove("open");
-        hamburger.classList.remove("active");
-        document.body.style.overflow = "";
-      });
-    });
-
-    // Optional: close if clicking outside the menu
-    mobileNav.addEventListener("click", e => {
-      if(e.target === mobileNav) {
-        mobileNav.classList.remove("open");
-        hamburger.classList.remove("active");
-        document.body.style.overflow = "";
-      }
-    });
   }
+
+  /* Optional: close mobile menu when a link is clicked */
+  const mobileLinks = document.querySelectorAll(".nav--mobile a");
+  mobileLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("open");
+      hamburger.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+  });
 
   /* ---------------------------
      TABBED SITEMAP
@@ -65,8 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tabContents.forEach(c => c.classList.remove("active"));
 
         tab.classList.add("active");
-        const content = document.getElementById(targetId);
-        if(content) content.classList.add("active");
+        document.getElementById(targetId).classList.add("active");
       });
     });
   }
@@ -75,8 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
      DYNAMIC YEAR IN FOOTER
   --------------------------- */
   const yearEl = document.getElementById("year");
-  if(yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
+  if(yearEl) yearEl.textContent = new Date().getFullYear();
 
 });
