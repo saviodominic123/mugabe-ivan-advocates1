@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mugabe Ivan Advocates</title>
-
+  
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
+  
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Optional: meta / SEO -->
   <meta name="description" content="Mugabe Ivan Advocates — Professional legal solutions for individuals and businesses in Kenya. Corporate law, litigation, IP, and more." />
 </head>
 <body>
-  <!-- SITE HEADER -->
+
+  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="container header-container">
-      <a href="index.html" class="brand" aria-label="Mugabe Ivan Advocates Home">
+      <a href="index.html" class="brand" aria-label="Home">
         <img src="assets/images/logo.jpg" alt="Mugabe Ivan Advocates logo" class="logo">
       </a>
 
-      <!-- Desktop nav -->
+      <!-- Desktop Nav -->
       <nav class="nav--desktop" aria-label="Primary">
         <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
@@ -34,22 +34,21 @@
         </ul>
       </nav>
 
-      <!-- Right actions -->
+      <!-- Header actions + Hamburger -->
       <div class="header-actions">
-        <a class="btn-primary" href="contact.html">Get in Touch</a>
-
-        <!-- Mobile hamburger -->
-        <button class="hamburger" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation">
-          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        <a href="contact.html" class="btn-primary">Get in Touch</a>
+        <button class="hamburger" id="navToggle" aria-expanded="false" aria-label="Open navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </button>
       </div>
     </div>
 
-    <!-- Mobile slide-out nav -->
-    <nav id="mobileNav" class="nav--mobile" aria-label="Mobile">
+    <!-- Mobile Menu -->
+    <nav class="nav--mobile" id="mobileNav" aria-label="Mobile">
       <div class="mobile-nav-inner">
-        <button class="nav-close" id="navClose" aria-label="Close navigation">&times;</button>
-
+        <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
         <ul class="mobile-links">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -58,17 +57,14 @@
           <li><a href="insights.html">Insights</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-
-        <div class="mobile-cta">
-          <a href="contact.html" class="btn-primary">Book Consultation</a>
-        </div>
+        <a href="contact.html" class="btn-primary mobile-cta">Book Consultation</a>
       </div>
     </nav>
   </header>
 
   <!-- HERO -->
   <main>
-    <section class="hero" role="region" aria-label="Intro">
+    <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
           <h1>Trusted legal counsel for businesses & individuals</h1>
@@ -78,9 +74,7 @@
             <a href="contact.html" class="btn-primary">Request a Consultation</a>
           </div>
         </div>
-
         <div class="hero-media" aria-hidden="true">
-          <!-- placeholder for image or illustration -->
           <div class="hero-card">
             <h3>Focused. Strategic. Effective.</h3>
             <p>Local expertise — global standards.</p>
@@ -89,25 +83,22 @@
       </div>
     </section>
 
-    <!-- PRACTICE AREAS -->
-    <section class="section section-alt" id="practice" aria-labelledby="practiceHeading">
+    <!-- Practice Areas -->
+    <section class="section section-alt">
       <div class="container">
-        <h2 id="practiceHeading" class="section-title">Practice Areas</h2>
-
+        <h2 class="section-title">Practice Areas</h2>
         <div class="grid grid-3">
-          <article class="card card-lg fade-in">
+          <article class="card card-lg">
             <h3>Corporate & Commercial</h3>
             <p>Advisory on corporate governance, transactions, mergers & acquisitions, and compliance.</p>
             <a href="practice-areas.html" class="link-more">Learn more →</a>
           </article>
-
-          <article class="card card-lg fade-in">
+          <article class="card card-lg">
             <h3>Dispute Resolution & Litigation</h3>
             <p>Experienced advocates in civil and commercial litigation across Kenyan courts and tribunals.</p>
             <a href="practice-areas.html" class="link-more">Learn more →</a>
           </article>
-
-          <article class="card card-lg fade-in">
+          <article class="card card-lg">
             <h3>Intellectual Property</h3>
             <p>Trademark, copyright and IP enforcement — protecting your brand and creative assets.</p>
             <a href="practice-areas.html" class="link-more">Learn more →</a>
@@ -116,92 +107,27 @@
       </div>
     </section>
 
-    <!-- TEAM PREVIEW -->
-    <section class="section" id="team" aria-labelledby="teamHeading">
-      <div class="container">
-        <h2 id="teamHeading" class="section-title">Our Team</h2>
-        <div class="grid grid-2">
-          <div class="team-card fade-in">
-            <img src="assets/images/team/member1.jpg" alt="Ivan Mugabe — Founding Partner">
-            <div class="team-info">
-              <h3>Ivan Mugabe</h3>
-              <p>Founding Partner</p>
-            </div>
-          </div>
-
-          <div class="team-card fade-in">
-            <img src="assets/images/team/member2.jpg" alt="Jane Doe — Senior Associate">
-            <div class="team-info">
-              <h3>Jane Doe</h3>
-              <p>Senior Associate</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INSIGHTS -->
-    <section class="section section-alt" aria-labelledby="insightsHeading">
-      <div class="container">
-        <h2 id="insightsHeading" class="section-title">Insights</h2>
-        <div class="grid grid-3">
-          <article class="article-card fade-in">
-            <h3>Understanding Corporate Compliance in Kenya</h3>
-            <p>Practical steps businesses must take to meet regulatory standards.</p>
-            <a href="insights.html" class="link-more">Read →</a>
-          </article>
-
-          <article class="article-card fade-in">
-            <h3>IP Protection for Startups</h3>
-            <p>How to protect and monetize your intellectual property from day one.</p>
-            <a href="insights.html" class="link-more">Read →</a>
-          </article>
-
-          <article class="article-card fade-in">
-            <h3>Commercial Contracts: Key Clauses</h3>
-            <p>Clauses every contract should include to manage risk and expectations.</p>
-            <a href="insights.html" class="link-more">Read →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section" role="region" aria-label="Contact call to action">
+    <!-- CTA Section -->
+    <section class="cta-section">
       <div class="container cta-inner">
         <h2>Ready to discuss your case?</h2>
         <p>Schedule a consultation with our team. We'll listen, advise, and act.</p>
         <a href="contact.html" class="btn-primary">Contact Us</a>
       </div>
     </section>
-
-    <!-- SITEMAP (Contact page quick-links) -->
-    <section class="container sitemap-section" aria-label="Sitemap">
-      <h2 class="sitemap-title">Quick Links</h2>
-      <ul class="sitemap-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="practice-areas.html">Practice Areas</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="insights.html">Insights</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-col">
-        <img src="assets/images/logo.jpg" alt="Mugabe Ivan Advocates" class="footer-logo">
+        <img src="assets/images/logo.jpg" alt="Logo" class="footer-logo">
         <p class="muted">Trusted legal counsel — Kenyan expertise, international standards.</p>
       </div>
-
       <div class="footer-col">
         <h4>Contact</h4>
         <p class="muted">No. 12 Legal Ave, Nairobi • <a href="tel:+254700000000">+254 700 000 000</a> • <a href="mailto:info@example.com">info@example.com</a></p>
       </div>
-
       <div class="footer-col">
         <h4>Quick links</h4>
         <ul class="footer-links">
@@ -211,39 +137,11 @@
         </ul>
       </div>
     </div>
-
     <div class="container footer-bottom">
       <p class="muted">© <span id="year"></span> Mugabe Ivan Advocates. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Small JS to handle mobile nav + year -->
-  <script>
-    (function () {
-      const navToggle = document.getElementById('navToggle');
-      const mobileNav = document.getElementById('mobileNav');
-      const navClose = document.getElementById('navClose');
-
-      function openNav() {
-        mobileNav.classList.add('open');
-        navToggle.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-      }
-      function closeNav() {
-        mobileNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      }
-
-      navToggle.addEventListener('click', openNav);
-      navClose.addEventListener('click', closeNav);
-      mobileNav.addEventListener('click', e => {
-        if (e.target === mobileNav) closeNav();
-      });
-
-      // insert current year
-      document.getElementById('year').textContent = new Date().getFullYear();
-    })();
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

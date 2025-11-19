@@ -1,3 +1,9 @@
+:root {
+    --spacing-sm: 8px;
+    --spacing-md: 20px;
+    --spacing-lg: 32px;
+}
+
 @media (max-width: 1024px) {
     .header-container {
         flex-direction: column;
@@ -6,6 +12,7 @@
     .nav-links {
         flex-direction: column;
         align-items: center;
+        gap: var(--spacing-md);
     }
 }
 
@@ -19,4 +26,6 @@
     .hero p {
         font-size: 16px;
     }
+    .nav--desktop { display: none; }
+    .hamburger { display: inline-flex; }
 }
